@@ -6,3 +6,23 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(GGally)
+```
+
+```{r}
+evals <- readr::read_tsv("https://www.openintro.org/data/tab-delimited/evals.txt")
+```
+
+```{r}
+m_bty_gen <- lm(score ~ bty_avg + gender, data = evals)
+tidy(m_bty_gen)
+```
+
+```{r}
+
+```
+
